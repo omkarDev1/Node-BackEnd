@@ -130,7 +130,6 @@ const SignInUser = async (req, res) => {
         if (!user) {
             return res.status(statusCode.BAD_REQUEST).json({ status: statusCode.BAD_REQUEST, success: false, message: "Email does not exist" });
         }
-
         const isMatch = await bcrypt.compare(password, user.password);
 
         if (!isMatch) {

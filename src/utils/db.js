@@ -12,5 +12,4 @@ const connect = async () => {
         process.exit(0)
     }
 };
-
 module.exports = connect;
